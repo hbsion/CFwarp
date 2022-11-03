@@ -180,12 +180,12 @@ exit 1
 fi
 	
 if [[ ${bit} == "x86_64" ]]; then
-wget -N https://cdn.jsdelivr.net/gh/kkkyg/CFwarp/wgcf-amd -O /usr/local/bin/wgcf && chmod +x /usr/local/bin/wgcf         
+wget -N https://cdn.jsdelivr.net/gh/hbsion/CFwarp/wgcf-amd -O /usr/local/bin/wgcf && chmod +x /usr/local/bin/wgcf         
 elif [[ ${bit} == "aarch64" ]]; then
-wget -N https://cdn.jsdelivr.net/gh/kkkyg/CFwarp/wgcf-arm -O /usr/local/bin/wgcf && chmod +x /usr/local/bin/wgcf
+wget -N https://cdn.jsdelivr.net/gh/hbsion/CFwarp/wgcf-arm -O /usr/local/bin/wgcf && chmod +x /usr/local/bin/wgcf
 fi
 if [[ ${vi} == " lxc" || ${vi} == " OpenVZ" ]]; then
-wget -N https://cdn.jsdelivr.net/gh/kkkyg/CFwarp/wireguard-go -O /usr/bin/wireguard-go && chmod +x /usr/bin/wireguard-go
+wget -N https://cdn.jsdelivr.net/gh/hbsion/CFwarp/wireguard-go -O /usr/bin/wireguard-go && chmod +x /usr/bin/wireguard-go
 fi
          
 echo | wgcf register
@@ -257,7 +257,7 @@ blue " WARP状态+IPv6地址+IP国家: ${WARPIPv6Status}"
 }
 
 function upcore(){
-wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/kkkyg/CFwarp/ucore.sh && chmod +x ucore.sh && ./ucore.sh
+wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/hbsion/CFwarp/ucore.sh && chmod +x ucore.sh && ./ucore.sh
 }
 
 function iptables(){
@@ -355,18 +355,18 @@ systemctl status wg-quick@wgcf
 }
 
 function up4(){
-wget -N --no-check-certificate https://raw.githubusercontent.com/kkkyg/CFwarp/main/CFwarp.sh && chmod +x CFwarp.sh && ./CFwarp.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/hbsion/CFwarp/main/CFwarp.sh && chmod +x CFwarp.sh && ./CFwarp.sh
 }
 
 function up6(){
 echo -e nameserver 2001:67c:2960:6464:6464:6464:6464:6464 > /etc/resolv.conf
-wget -N --no-check-certificate https://raw.githubusercontent.com/kkkyg/CFwarp/main/CFwarp.sh && chmod +x CFwarp.sh && ./CFwarp.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/hbsion/CFwarp/main/CFwarp.sh && chmod +x CFwarp.sh && ./CFwarp.sh
 }
 
 #主菜单
 function start_menu(){
     clear
-    yellow " 详细说明 https://github.com/kkkyg/CFwarp  YouTube频道：甬哥侃侃侃" 
+    yellow " 详细说明 https://github.com/hbsion/CFwarp  YouTube频道：甬哥侃侃侃" 
     
     red " 切记：进入脚本快捷方式 bash CFwarp.sh "
     
